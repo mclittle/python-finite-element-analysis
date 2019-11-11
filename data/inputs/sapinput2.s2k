@@ -1,0 +1,711 @@
+File C:\Users\mclittle\Desktop\Programming\github\mclittle\bitirme\data\inputs\sapinput2.s2k was saved on m/d/yy at h:mm:ss
+ 
+TABLE:  "PROGRAM CONTROL"
+   ProgramName=SAP2000   Version=20.2.0   ProgLevel=Ultimate   LicenseNum=3010*1MPMNMSZ3K57LAY   LicenseOS=Yes   LicenseSC=Yes   LicenseHT=No   CurrUnits="KN, m, C"   SteelCode="AISC 360-10"   ConcCode="ACI 318-11"   AlumCode="AA-ASD 2000" _
+        ColdCode=AISI-ASD96   RegenHinge=Yes
+ 
+TABLE:  "ACTIVE DEGREES OF FREEDOM"
+   UX=Yes   UY=Yes   UZ=Yes   RX=No   RY=No   RZ=No
+ 
+TABLE:  "ANALYSIS OPTIONS"
+   Solver=Advanced   SolverProc=Auto   Force32Bit=No   StiffCase=None   GeomMod=None   HingeOpt="In Elements"
+ 
+TABLE:  "COORDINATE SYSTEMS"
+   Name=GLOBAL   Type=Cartesian   X=0   Y=0   Z=0   AboutZ=0   AboutY=0   AboutX=0
+ 
+TABLE:  "GRID LINES"
+   CoordSys=GLOBAL   AxisDir=X   XRYZCoord=0   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End   AllVisible=No   BubbleSize=1000
+   CoordSys=GLOBAL   AxisDir=X   XRYZCoord=5   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+   CoordSys=GLOBAL   AxisDir=Y   XRYZCoord=0   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+   CoordSys=GLOBAL   AxisDir=Y   XRYZCoord=0.25   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+   CoordSys=GLOBAL   AxisDir=Z   XRYZCoord=-0.25   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+   CoordSys=GLOBAL   AxisDir=Z   XRYZCoord=0   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+   CoordSys=GLOBAL   AxisDir=Z   XRYZCoord=0.25   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+ 
+TABLE:  "MATERIAL PROPERTIES 01 - GENERAL"
+   Material=4000Psi   Type=Concrete   Grade="f'c 4000 psi"   SymType=Isotropic   TempDepend=No   Color=Magenta   Notes="Customary f'c 4000 psi 20.10.2019 22:00:07"
+   Material=A416Gr270   Type=Tendon   Grade="Grade 270"   SymType=Uniaxial   TempDepend=No   Color=Yellow   Notes="ASTM A416 Grade 270 20.10.2019 22:00:07"
+   Material=A992Fy50   Type=Steel   SymType=Isotropic   TempDepend=No   Color=Cyan   Notes="ASTM A992 Grade 50 17.05.2017 14:03:20"
+   Material=A992Fy50-1   Type=Steel   SymType=Isotropic   TempDepend=No   Color=Green   Notes="United States ASTM A992 Grade 50 added 27.05.2017 18:15:54"
+ 
+TABLE:  "MATERIAL PROPERTIES 02 - BASIC MECHANICAL PROPERTIES"
+   Material=4000Psi   UnitWeight=23.5631216161854   UnitMass=2.40276960558926   E1=24855578.0600518   G12=10356490.8583549   U12=0.2   A1=9.89999952793124E-06
+   Material=A416Gr270   UnitWeight=76.9728639422648   UnitMass=7.84904737995992   E1=196500599.8512   A1=1.16999994421006E-05
+   Material=A992Fy50   UnitWeight=0   UnitMass=0   E1=200000000   G12=76923076.9230769   U12=0.3   A1=0
+   Material=A992Fy50-1   UnitWeight=76.9728639422648   UnitMass=7.84904737995992   E1=200000000   G12=76923076.9230769   U12=0.3   A1=0
+ 
+TABLE:  "MATERIAL PROPERTIES 03A - STEEL DATA"
+   Material=A992Fy50   Fy=344737.894475789   Fu=448159.262818526   EffFy=379211.683923368   EffFu=492975.189100378   SSCurveOpt=Simple   SSHysType=Kinematic   SHard=0.015   SMax=0.11   SRup=0.17   FinalSlope=-0.1
+   Material=A992Fy50-1   Fy=344737.894475789   Fu=448159.262818526   EffFy=379211.683923368   EffFu=492975.189100378   SSCurveOpt=Simple   SSHysType=Kinematic   SHard=0.015   SMax=0.11   SRup=0.17   FinalSlope=-0.1
+ 
+TABLE:  "MATERIAL PROPERTIES 03B - CONCRETE DATA"
+   Material=4000Psi   Fc=27579.0315580631   eFc=27579.0315580631   LtWtConc=No   SSCurveOpt=Mander   SSHysType=Takeda   SFc=0.00221914   SCap=0.005   FinalSlope=-0.1   FAngle=0   DAngle=0
+ 
+TABLE:  "MATERIAL PROPERTIES 03F - TENDON DATA"
+   Material=A416Gr270   Fy=1689905.15872032   Fu=1861584.63016926   SSCurveOpt="270 ksi"   SSHysType=Kinematic   FinalSlope=-0.1
+ 
+TABLE:  "MATERIAL PROPERTIES 06 - DAMPING PARAMETERS"
+   Material=4000Psi   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=A416Gr270   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=A992Fy50   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=A992Fy50-1   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+ 
+TABLE:  "FRAME SECTION PROPERTIES 01 - GENERAL"
+   SectionName=FSEC1   Material=A992Fy50   Shape="I/Wide Flange"   t3=0.3048   t2=0.127   tf=0.009652   tw=0.00635   t2b=0.127   tfb=0.009652   Area=0.0042645076   TorsConst=9.65117678053954E-08   I33=6.5724174702235E-05 _
+        I22=3.30125717301008E-06   I23=0   AS2=0.00193548   AS3=0.00204300666666667   S33=0.00043126098885981   S22=5.19883019371667E-05   Z33=0.0004911874950424   Z22=8.0716532115E-05   R33=0.124144683132414   R22=0.0278230817990979 _
+        ConcCol=No   ConcBeam=No   Color=Green   TotalWt=0   TotalMass=0   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1   Notes="Added 17.05.2017 14:03:39"
+ 
+TABLE:  "FRAME SECTION PROPERTIES 13 - TIME DEPENDENT"
+   SectionName=FSEC1   TypeSize=Auto   AutoValSize=0.0100235223880597   AutoSFSize=1
+ 
+TABLE:  "SOLID PROPERTY DEFINITIONS"
+   SolidProp=Solid1   Material=A992Fy50-1   MatAngleA=0   MatAngleB=0   MatAngleC=0   InComp=No   Color=Cyan   GUID=280f837a-194c-4b75-88a6-ec37bcbb7482   Notes="Added 17.05.2017 14:05:32"   TotalWt=88.9998739332436   TotalMass=9.07546103307866
+   SolidProp=Solid2   Material=4000Psi   MatAngleA=0   MatAngleB=0   MatAngleC=0   InComp=Yes   Color=Gray8Dark   TotalWt=0   TotalMass=0
+ 
+TABLE:  "REBAR SIZES"
+   RebarID=#2   Area=3.2258E-05   Diameter=0.00635
+   RebarID=#3   Area=7.09675996154547E-05   Diameter=0.009525
+   RebarID=#4   Area=0.000129032001922727   Diameter=0.0127
+   RebarID=#5   Area=0.000199999601538181   Diameter=0.015875
+   RebarID=#6   Area=0.000283870398461819   Diameter=0.01905
+   RebarID=#7   Area=0.000387096015381813   Diameter=0.022225
+   RebarID=#8   Area=0.000509676413843632   Diameter=0.0254
+   RebarID=#9   Area=0.00064516   Diameter=0.0286512005329132
+   RebarID=#10   Area=0.00081935318769455   Diameter=0.0322579995155334
+   RebarID=#11   Area=0.00100644956308365   Diameter=0.0358139991521835
+   RebarID=#14   Area=0.00145161   Diameter=0.0430021989583969
+   RebarID=#18   Area=0.00258064   Diameter=0.0573277992248535
+   RebarID=10M   Area=0.000100000002655387   Diameter=0.011300000667572
+   RebarID=15M   Area=0.000200000005310774   Diameter=0.0159999999403954
+   RebarID=20M   Area=0.000300000017579794   Diameter=0.0194999997854233
+   RebarID=25M   Area=0.000500000022890568   Diameter=0.0252000016093254
+   RebarID=30M   Area=0.000700000008974075   Diameter=0.0299000008821487
+   RebarID=35M   Area=0.00100000004578114   Diameter=0.0357000011444092
+   RebarID=45M   Area=0.00150000010712624   Diameter=0.0437000003576279
+   RebarID=55M   Area=0.00250000007599831   Diameter=0.0564000033855438
+   RebarID=6d   Area=2.83000004149973E-05   Diameter=0.006000000166893
+   RebarID=8d   Area=5.02999995571375E-05   Diameter=0.00799999997019768
+   RebarID=10d   Area=7.85000013634562E-05   Diameter=0.00999999977350235
+   RebarID=12d   Area=0.000113000009249449   Diameter=0.012000000333786
+   RebarID=14d   Area=0.000154000010818839   Diameter=0.0140000008940697
+   RebarID=16d   Area=0.000201000015431643   Diameter=0.0159999999403954
+   RebarID=20d   Area=0.000314000005453825   Diameter=0.0199999995470047
+   RebarID=25d   Area=0.000491000008711815   Diameter=0.0250000001907349
+   RebarID=26d   Area=0.000531000029001236   Diameter=0.0259999997138977
+   RebarID=28d   Area=0.000616000043275356   Diameter=0.0280000017881393
+   RebarID=N12   Area=0.000113000009249449   Diameter=0.012000000333786
+   RebarID=N16   Area=0.000201000015431643   Diameter=0.0159999999403954
+   RebarID=N20   Area=0.000314000005453825   Diameter=0.0199999995470047
+   RebarID=N24   Area=0.000452000036997795   Diameter=0.024000000667572
+   RebarID=N28   Area=0.000616000043275356   Diameter=0.0280000017881393
+   RebarID=N32   Area=0.00080400006172657   Diameter=0.0319999998807907
+   RebarID=N36   Area=0.00102000001747131   Diameter=0.036000001001358
+ 
+TABLE:  "LOAD PATTERN DEFINITIONS"
+   LoadPat=DEAD   DesignType=Dead   SelfWtMult=0   GUID=066421cb-2202-4b11-a6d3-66fa93a0da9f
+ 
+TABLE:  "AUTO WAVE 3 - WAVE CHARACTERISTICS - GENERAL"
+   WaveChar=Default   WaveType="From Theory"   KinFactor=1   SWaterDepth=45   WaveHeight=18   WavePeriod=12   WaveTheory=Linear
+ 
+TABLE:  "FUNCTION - TIME HISTORY - COSINE"
+   Name=FUNC2   Time=0   Value=1   Period=2   StepsPerCyc=20   NumCycles=1   Amplitude=1
+   Name=FUNC2   Time=0.1   Value=0.951056516295154
+   Name=FUNC2   Time=0.2   Value=0.809016994374947
+   Name=FUNC2   Time=0.3   Value=0.587785252292473
+   Name=FUNC2   Time=0.4   Value=0.309016994374947
+   Name=FUNC2   Time=0.5   Value=0
+   Name=FUNC2   Time=0.6   Value=-0.309016994374947
+   Name=FUNC2   Time=0.7   Value=-0.587785252292473
+   Name=FUNC2   Time=0.8   Value=-0.809016994374947
+   Name=FUNC2   Time=0.9   Value=-0.951056516295154
+   Name=FUNC2   Time=1   Value=-1
+   Name=FUNC2   Time=1.1   Value=-0.951056516295154
+   Name=FUNC2   Time=1.2   Value=-0.809016994374948
+   Name=FUNC2   Time=1.3   Value=-0.587785252292473
+   Name=FUNC2   Time=1.4   Value=-0.309016994374948
+   Name=FUNC2   Time=1.5   Value=0
+   Name=FUNC2   Time=1.6   Value=0.309016994374947
+   Name=FUNC2   Time=1.7   Value=0.587785252292473
+   Name=FUNC2   Time=1.8   Value=0.809016994374947
+   Name=FUNC2   Time=1.9   Value=0.951056516295154
+   Name=FUNC2   Time=2   Value=1
+ 
+TABLE:  "GROUPS 1 - DEFINITIONS"
+   GroupName=All   Selection=Yes   SectionCut=Yes   Steel=Yes   Concrete=Yes   Aluminum=Yes   ColdFormed=Yes   Stage=Yes   Bridge=Yes   AutoSeismic=No   AutoWind=No   SelDesSteel=No   SelDesAlum=No   SelDesCold=No   MassWeight=Yes   Color=Red
+   GroupName=Node1   Selection=Yes   SectionCut=Yes   Steel=Yes   Concrete=Yes   Aluminum=Yes   ColdFormed=Yes   Stage=Yes   Bridge=Yes   AutoSeismic=No   AutoWind=No   SelDesSteel=No   SelDesAlum=No   SelDesCold=No   MassWeight=Yes   Color=Green
+   GroupName=Node2   Selection=Yes   SectionCut=Yes   Steel=Yes   Concrete=Yes   Aluminum=Yes   ColdFormed=Yes   Stage=Yes   Bridge=Yes   AutoSeismic=No   AutoWind=No   SelDesSteel=No   SelDesAlum=No   SelDesCold=No   MassWeight=Yes   Color=Cyan
+   GroupName=Node4   Selection=Yes   SectionCut=Yes   Steel=Yes   Concrete=Yes   Aluminum=Yes   ColdFormed=Yes   Stage=Yes   Bridge=Yes   AutoSeismic=No   AutoWind=No   SelDesSteel=No   SelDesAlum=No   SelDesCold=No   MassWeight=Yes   Color=Red
+   GroupName=Node8   Selection=Yes   SectionCut=Yes   Steel=Yes   Concrete=Yes   Aluminum=Yes   ColdFormed=Yes   Stage=Yes   Bridge=Yes   AutoSeismic=No   AutoWind=No   SelDesSteel=No   SelDesAlum=No   SelDesCold=No   MassWeight=Yes   Color=Magenta
+ 
+TABLE:  "GROUPS 2 - ASSIGNMENTS"
+   GroupName=Node1   ObjectType=Joint   ObjectLabel=6
+   GroupName=Node1   ObjectType=Joint   ObjectLabel=8
+   GroupName=Node1   ObjectType=Joint   ObjectLabel=10
+   GroupName=Node1   ObjectType=Joint   ObjectLabel=12
+   GroupName=Node1   ObjectType=Joint   ObjectLabel=5
+   GroupName=Node1   ObjectType=Joint   ObjectLabel=7
+   GroupName=Node1   ObjectType=Joint   ObjectLabel=9
+   GroupName=Node1   ObjectType=Joint   ObjectLabel=11
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=13
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=14
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=17
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=18
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=21
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=22
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=25
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=26
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=29
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=30
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=33
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=34
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=37
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=38
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=41
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=42
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=45
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=46
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=49
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=50
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=51
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=52
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=53
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=54
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=55
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=56
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=57
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=58
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=59
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=60
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=61
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=62
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=63
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=64
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=65
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=66
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=2
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=3
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=87
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=99
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=1
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=4
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=67
+   GroupName=Node2   ObjectType=Joint   ObjectLabel=89
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=15
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=16
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=19
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=20
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=23
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=24
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=27
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=28
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=31
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=32
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=35
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=36
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=39
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=40
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=43
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=44
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=47
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=48
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=68
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=71
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=73
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=75
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=77
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=79
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=81
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=83
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=85
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=90
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=91
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=92
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=93
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=94
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=95
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=96
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=97
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=98
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=88
+   GroupName=Node4   ObjectType=Joint   ObjectLabel=69
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=70
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=72
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=74
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=76
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=78
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=80
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=82
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=84
+   GroupName=Node8   ObjectType=Joint   ObjectLabel=86
+ 
+TABLE:  "GROUPS 3 - MASSES AND WEIGHTS"
+   GroupName=All   SelfMass=9.07546103307866   SelfWeight=88.9998739332436   TotalMassX=9.07546103307866   TotalMassY=9.07546103307866   TotalMassZ=9.07546103307866
+   GroupName=Node1   SelfMass=0   SelfWeight=0   TotalMassX=0   TotalMassY=0   TotalMassZ=0
+   GroupName=Node2   SelfMass=0   SelfWeight=0   TotalMassX=0   TotalMassY=0   TotalMassZ=0
+   GroupName=Node4   SelfMass=0   SelfWeight=0   TotalMassX=0   TotalMassY=0   TotalMassZ=0
+   GroupName=Node8   SelfMass=0   SelfWeight=0   TotalMassX=0   TotalMassY=0   TotalMassZ=0
+ 
+TABLE:  "JOINT PATTERN DEFINITIONS"
+   Pattern=Default
+ 
+TABLE:  "MASS SOURCE"
+   MassSource=MSSSRC1   Elements=Yes   Masses=Yes   Loads=No   IsDefault=Yes
+ 
+TABLE:  "FUNCTION - PLOT FUNCTIONS"
+   PlotFunc="Input Energy"   Type=Energy   Component=Input   Mode=All
+   PlotFunc=Joint12   Type=Joint   ObjectLabel=12   Component=RelDispU1   Mode=All
+ 
+TABLE:  "LOAD CASE DEFINITIONS"
+   Case=DEAD   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Dead   DesActOpt="Prog Det"   DesignAct=Non-Composite   AutoType=None   RunCase=Yes   CaseStatus=Finished
+   Case=MODAL   Type=LinModal   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Other   AutoType=None   RunCase=No   CaseStatus="Not Run"
+ 
+TABLE:  "CASE - STATIC 1 - LOAD ASSIGNMENTS"
+   Case=DEAD   LoadType="Load pattern"   LoadName=DEAD   LoadSF=1
+ 
+TABLE:  "CASE - MODAL 1 - GENERAL"
+   Case=MODAL   ModeType=Eigen   MaxNumModes=12   MinNumModes=1   EigenShift=0   EigenCutoff=0   EigenTol=1E-09   AutoShift=Yes
+ 
+TABLE:  "JOINT COORDINATES"
+   Joint=1   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0   Z=0   SpecialJt=No   GlobalX=0   GlobalY=0   GlobalZ=0
+   Joint=2   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=0   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=0
+   Joint=3   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=0   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=0
+   Joint=4   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0.25   Z=0   SpecialJt=No   GlobalX=0   GlobalY=0.25   GlobalZ=0
+   Joint=5   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0   Z=-0.25   SpecialJt=No   GlobalX=0   GlobalY=0   GlobalZ=-0.25
+   Joint=6   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=-0.25   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=-0.25
+   Joint=7   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=0   GlobalY=0.25   GlobalZ=-0.25
+   Joint=8   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=-0.25
+   Joint=9   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0   Z=0.25   SpecialJt=No   GlobalX=0   GlobalY=0   GlobalZ=0.25
+   Joint=10   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=0.25   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=0.25
+   Joint=11   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=0   GlobalY=0.25   GlobalZ=0.25
+   Joint=12   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=0.25
+   Joint=13   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0   Z=-0.25   SpecialJt=No   GlobalX=0.5   GlobalY=0   GlobalZ=-0.25
+   Joint=14   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=0.5   GlobalY=0.25   GlobalZ=-0.25
+   Joint=15   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0   Z=0   SpecialJt=No   GlobalX=0.5   GlobalY=0   GlobalZ=0
+   Joint=16   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0.25   Z=0   SpecialJt=No   GlobalX=0.5   GlobalY=0.25   GlobalZ=0
+   Joint=17   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0   Z=-0.25   SpecialJt=No   GlobalX=1   GlobalY=0   GlobalZ=-0.25
+   Joint=18   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=1   GlobalY=0.25   GlobalZ=-0.25
+   Joint=19   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0   Z=0   SpecialJt=No   GlobalX=1   GlobalY=0   GlobalZ=0
+   Joint=20   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0.25   Z=0   SpecialJt=No   GlobalX=1   GlobalY=0.25   GlobalZ=0
+   Joint=21   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0   Z=-0.25   SpecialJt=No   GlobalX=1.5   GlobalY=0   GlobalZ=-0.25
+   Joint=22   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=1.5   GlobalY=0.25   GlobalZ=-0.25
+   Joint=23   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0   Z=0   SpecialJt=No   GlobalX=1.5   GlobalY=0   GlobalZ=0
+   Joint=24   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0.25   Z=0   SpecialJt=No   GlobalX=1.5   GlobalY=0.25   GlobalZ=0
+   Joint=25   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0   Z=-0.25   SpecialJt=No   GlobalX=2   GlobalY=0   GlobalZ=-0.25
+   Joint=26   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=2   GlobalY=0.25   GlobalZ=-0.25
+   Joint=27   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0   Z=0   SpecialJt=No   GlobalX=2   GlobalY=0   GlobalZ=0
+   Joint=28   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0.25   Z=0   SpecialJt=No   GlobalX=2   GlobalY=0.25   GlobalZ=0
+   Joint=29   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0   Z=-0.25   SpecialJt=No   GlobalX=2.5   GlobalY=0   GlobalZ=-0.25
+   Joint=30   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=2.5   GlobalY=0.25   GlobalZ=-0.25
+   Joint=31   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0   Z=0   SpecialJt=No   GlobalX=2.5   GlobalY=0   GlobalZ=0
+   Joint=32   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0.25   Z=0   SpecialJt=No   GlobalX=2.5   GlobalY=0.25   GlobalZ=0
+   Joint=33   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0   Z=-0.25   SpecialJt=No   GlobalX=3   GlobalY=0   GlobalZ=-0.25
+   Joint=34   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=3   GlobalY=0.25   GlobalZ=-0.25
+   Joint=35   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0   Z=0   SpecialJt=No   GlobalX=3   GlobalY=0   GlobalZ=0
+   Joint=36   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0.25   Z=0   SpecialJt=No   GlobalX=3   GlobalY=0.25   GlobalZ=0
+   Joint=37   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0   Z=-0.25   SpecialJt=No   GlobalX=3.5   GlobalY=0   GlobalZ=-0.25
+   Joint=38   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=3.5   GlobalY=0.25   GlobalZ=-0.25
+   Joint=39   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0   Z=0   SpecialJt=No   GlobalX=3.5   GlobalY=0   GlobalZ=0
+   Joint=40   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0.25   Z=0   SpecialJt=No   GlobalX=3.5   GlobalY=0.25   GlobalZ=0
+   Joint=41   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0   Z=-0.25   SpecialJt=No   GlobalX=4   GlobalY=0   GlobalZ=-0.25
+   Joint=42   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=4   GlobalY=0.25   GlobalZ=-0.25
+   Joint=43   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0   Z=0   SpecialJt=No   GlobalX=4   GlobalY=0   GlobalZ=0
+   Joint=44   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0.25   Z=0   SpecialJt=No   GlobalX=4   GlobalY=0.25   GlobalZ=0
+   Joint=45   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=-0.25   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=-0.25
+   Joint=46   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=-0.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=-0.25
+   Joint=47   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=0   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=0
+   Joint=48   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=0   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=0
+   Joint=49   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0   Z=0.25   SpecialJt=No   GlobalX=0.5   GlobalY=0   GlobalZ=0.25
+   Joint=50   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=0.5   GlobalY=0.25   GlobalZ=0.25
+   Joint=51   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0   Z=0.25   SpecialJt=No   GlobalX=1   GlobalY=0   GlobalZ=0.25
+   Joint=52   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=1   GlobalY=0.25   GlobalZ=0.25
+   Joint=53   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0   Z=0.25   SpecialJt=No   GlobalX=1.5   GlobalY=0   GlobalZ=0.25
+   Joint=54   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=1.5   GlobalY=0.25   GlobalZ=0.25
+   Joint=55   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0   Z=0.25   SpecialJt=No   GlobalX=2   GlobalY=0   GlobalZ=0.25
+   Joint=56   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=2   GlobalY=0.25   GlobalZ=0.25
+   Joint=57   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0   Z=0.25   SpecialJt=No   GlobalX=2.5   GlobalY=0   GlobalZ=0.25
+   Joint=58   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=2.5   GlobalY=0.25   GlobalZ=0.25
+   Joint=59   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0   Z=0.25   SpecialJt=No   GlobalX=3   GlobalY=0   GlobalZ=0.25
+   Joint=60   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=3   GlobalY=0.25   GlobalZ=0.25
+   Joint=61   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0   Z=0.25   SpecialJt=No   GlobalX=3.5   GlobalY=0   GlobalZ=0.25
+   Joint=62   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=3.5   GlobalY=0.25   GlobalZ=0.25
+   Joint=63   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0   Z=0.25   SpecialJt=No   GlobalX=4   GlobalY=0   GlobalZ=0.25
+   Joint=64   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=4   GlobalY=0.25   GlobalZ=0.25
+   Joint=65   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=0.25   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=0.25
+   Joint=66   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=0.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=0.25
+   Joint=67   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=0   GlobalY=0.125   GlobalZ=-0.25
+   Joint=68   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=0.5   GlobalY=0.125   GlobalZ=-0.25
+   Joint=69   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0.125   Z=0   SpecialJt=No   GlobalX=0   GlobalY=0.125   GlobalZ=0
+   Joint=70   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0.125   Z=0   SpecialJt=No   GlobalX=0.5   GlobalY=0.125   GlobalZ=0
+   Joint=71   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=1   GlobalY=0.125   GlobalZ=-0.25
+   Joint=72   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0.125   Z=0   SpecialJt=No   GlobalX=1   GlobalY=0.125   GlobalZ=0
+   Joint=73   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=1.5   GlobalY=0.125   GlobalZ=-0.25
+   Joint=74   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0.125   Z=0   SpecialJt=No   GlobalX=1.5   GlobalY=0.125   GlobalZ=0
+   Joint=75   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=2   GlobalY=0.125   GlobalZ=-0.25
+   Joint=76   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0.125   Z=0   SpecialJt=No   GlobalX=2   GlobalY=0.125   GlobalZ=0
+   Joint=77   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=2.5   GlobalY=0.125   GlobalZ=-0.25
+   Joint=78   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0.125   Z=0   SpecialJt=No   GlobalX=2.5   GlobalY=0.125   GlobalZ=0
+   Joint=79   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=3   GlobalY=0.125   GlobalZ=-0.25
+   Joint=80   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0.125   Z=0   SpecialJt=No   GlobalX=3   GlobalY=0.125   GlobalZ=0
+   Joint=81   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=3.5   GlobalY=0.125   GlobalZ=-0.25
+   Joint=82   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0.125   Z=0   SpecialJt=No   GlobalX=3.5   GlobalY=0.125   GlobalZ=0
+   Joint=83   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=4   GlobalY=0.125   GlobalZ=-0.25
+   Joint=84   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0.125   Z=0   SpecialJt=No   GlobalX=4   GlobalY=0.125   GlobalZ=0
+   Joint=85   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=-0.25
+   Joint=86   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=0   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=0
+   Joint=87   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=-0.25   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=-0.25
+   Joint=88   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=0   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=0
+   Joint=89   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=0   GlobalY=0.125   GlobalZ=0.25
+   Joint=90   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0.5   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=0.5   GlobalY=0.125   GlobalZ=0.25
+   Joint=91   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=1   GlobalY=0.125   GlobalZ=0.25
+   Joint=92   CoordSys=GLOBAL   CoordType=Cartesian   XorR=1.5   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=1.5   GlobalY=0.125   GlobalZ=0.25
+   Joint=93   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=2   GlobalY=0.125   GlobalZ=0.25
+   Joint=94   CoordSys=GLOBAL   CoordType=Cartesian   XorR=2.5   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=2.5   GlobalY=0.125   GlobalZ=0.25
+   Joint=95   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=3   GlobalY=0.125   GlobalZ=0.25
+   Joint=96   CoordSys=GLOBAL   CoordType=Cartesian   XorR=3.5   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=3.5   GlobalY=0.125   GlobalZ=0.25
+   Joint=97   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=4   GlobalY=0.125   GlobalZ=0.25
+   Joint=98   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=0.25
+   Joint=99   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=0.25   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=0.25
+   Joint=100   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=0.5   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=0.5   GUID=2876ebb0-ddce-4c82-9f56-1dd020e68563
+   Joint=101   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=0.5   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=0.5   GUID=e446396b-483c-44b8-bc6b-59adf7131689
+   Joint=102   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=0.75   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=0.75   GUID=d90b25a6-d803-453c-9714-faa8a24d6213
+   Joint=103   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=0.75   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=0.75   GUID=b3d2e9ad-fdad-4be8-bb05-cfdc1e134806
+   Joint=104   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=0.5   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=0.5   GUID=e5cd57f6-5dbe-454a-b605-d07231a6751d
+   Joint=105   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=0.5   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=0.5   GUID=1407c724-3d8b-46b6-9103-809541756e63
+   Joint=106   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=0.75   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=0.75   GUID=9e81e6f6-9715-4300-8aa4-b5e7fa0e6871
+   Joint=107   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=0.75   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=0.75   GUID=ae426b17-0516-45ff-a054-8ae5f6347ecb
+   Joint=108   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=0.5   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=0.5   GUID=74cadce8-f34e-46ca-a4e9-c217d4ae8165
+   Joint=109   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=0.5   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=0.5   GUID=c229e9d7-99aa-4fb3-8667-9452feb49588
+   Joint=110   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=0.75   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=0.75   GUID=35c443a1-e596-4f23-8fc1-f227ad064538
+   Joint=111   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=0.75   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=0.75   GUID=cb24af98-598a-40e9-be9b-6aaea4c43c61
+   Joint=112   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=1   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=1   GUID=7d46624d-aa22-4567-aa50-e3cbb3ae42a1
+   Joint=113   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=1   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=1   GUID=f735cfa1-220b-457f-83c5-be2838b4b160
+   Joint=114   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=1.25   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=1.25   GUID=935ec417-6c7e-4d23-853a-4268e1030b8b
+   Joint=115   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=1.25   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=1.25   GUID=4911de1b-c0cb-4b8e-b19d-a696454b5aaf
+   Joint=116   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=1   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=1   GUID=1030c681-be96-4c47-b8d7-d6be7962aba8
+   Joint=117   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=1   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=1   GUID=380d5463-b306-43f2-94d7-36a6c9a7ddd2
+   Joint=118   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=1.25   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=1.25   GUID=728b75ff-d721-443e-98e2-f92cab250b48
+   Joint=119   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=1.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=1.25   GUID=d0111fa6-34b1-4714-97d5-0bc2fba29ade
+   Joint=120   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=1   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=1   GUID=1e5af6a9-f315-4d44-92e9-5ddc1e8bbf6f
+   Joint=121   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=1   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=1   GUID=db301a6b-6550-4888-ac06-8e63db8bf90b
+   Joint=122   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=1.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=1.25   GUID=68535b54-dca1-45ae-a5b8-51a28fe53d11
+   Joint=123   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=1.25   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=1.25   GUID=896d904d-b002-47d2-ba1e-4ba3cd2fc0a7
+   Joint=124   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=1.5   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=1.5   GUID=d56acd64-ca5f-48e4-bc5f-e6e446fda16c
+   Joint=125   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=1.5   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=1.5   GUID=5c8fa11f-76d6-4a87-86ef-a992b0ffae8f
+   Joint=126   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=1.75   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=1.75   GUID=52a32649-1e1c-4633-b2f4-4c74a76dccf8
+   Joint=127   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=1.75   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=1.75   GUID=eb2be0b9-3ccf-4d02-9261-4aa71f6eb8b7
+   Joint=128   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=1.5   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=1.5   GUID=ebb47844-389a-4909-887b-016cbddde3dc
+   Joint=129   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=1.5   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=1.5   GUID=f58e3312-0f80-4801-b39e-39e3ce45a89a
+   Joint=130   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=1.75   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=1.75   GUID=da6aad51-6496-42aa-b106-524398dde1f4
+   Joint=131   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=1.75   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=1.75   GUID=08924a5c-3361-4b2f-92f7-c3f6bd6956e9
+   Joint=132   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=1.5   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=1.5   GUID=7ab1dd8a-6634-437d-a9b7-e2fa01d22b5b
+   Joint=133   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=1.5   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=1.5   GUID=67a11038-8028-434e-8de9-9264c2e93163
+   Joint=134   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=1.75   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=1.75   GUID=6afb17dd-0c75-477f-8c15-4998e032228d
+   Joint=135   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=1.75   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=1.75   GUID=e87b3e9a-3f30-4452-bcee-1a6919c12042
+   Joint=136   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=2   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=2   GUID=caaa564b-0e65-454d-9b24-74a3dbab7337
+   Joint=137   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=2   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=2   GUID=d079fad0-8146-4600-bb0c-c351dddf6c99
+   Joint=138   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=2.25   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=2.25   GUID=52e43463-0d1b-4781-a421-d9af2c23a7a6
+   Joint=139   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=2.25   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=2.25   GUID=72886dbb-e54f-482b-a406-2791517c2310
+   Joint=140   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=2   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=2   GUID=b7551575-ed2f-420e-b586-1939216c04e0
+   Joint=141   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=2   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=2   GUID=481a41dd-e610-4814-865f-cdf706cb6015
+   Joint=142   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=2.25   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=2.25   GUID=a05121f1-533c-4992-b4f0-88b6dad97c24
+   Joint=143   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=2.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=2.25   GUID=8ded59bf-83f8-4c6c-8179-1d2ba7a84e96
+   Joint=144   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=2   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=2   GUID=03ef7912-a4f2-4aba-9525-753c4da467c7
+   Joint=145   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=2   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=2   GUID=85a7e337-c41d-4bc7-ad2a-d6274d640484
+   Joint=146   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=2.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=2.25   GUID=41af04f4-77bb-4694-aea5-5246874f9e7d
+   Joint=147   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=2.25   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=2.25   GUID=6a62db72-861c-4d88-a09e-e16e2e43f8c7
+   Joint=148   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=2.5   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=2.5   GUID=df47408b-6249-465f-b203-ebf0c72d78bb
+   Joint=149   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=2.5   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=2.5   GUID=7f9c8351-47db-45ad-b9f8-4f4250030f39
+   Joint=150   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=2.75   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=2.75   GUID=1a7d9edf-1a24-4c2f-b384-fd8954d1849a
+   Joint=151   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=2.75   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=2.75   GUID=9196ae74-2e23-4472-9e55-b93228962126
+   Joint=152   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=2.5   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=2.5   GUID=f5cdf9e2-9b61-4d00-a6b1-3804baf6770b
+   Joint=153   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=2.5   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=2.5   GUID=b5db56e3-e0ad-4c08-9aa9-1f742ffccfb8
+   Joint=154   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=2.75   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=2.75   GUID=a7ef76a4-1e73-475b-be41-355f911b4def
+   Joint=155   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=2.75   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=2.75   GUID=39aac9a2-c507-4e58-85f3-349261817637
+   Joint=156   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=2.5   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=2.5   GUID=af872511-b6c7-456d-ad5b-ddb0838f32ae
+   Joint=157   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=2.5   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=2.5   GUID=c5480ee5-36fc-4199-8b23-ff55f32bcef5
+   Joint=158   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=2.75   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=2.75   GUID=b90813b7-f8ab-4759-a6bd-895b52c25096
+   Joint=159   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=2.75   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=2.75   GUID=a031f6a5-2e27-4bc4-9237-8ce1e6cb8721
+   Joint=160   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=3   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=3   GUID=a084536e-f1a0-4233-84ef-89380e44e634
+   Joint=161   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=3   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=3   GUID=77fb6ecb-653a-43b1-b43b-ccbe26d69a71
+   Joint=162   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=3.25   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=3.25   GUID=d5310cc1-88d1-45f3-87e0-50e0fbbd9e50
+   Joint=163   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=3.25   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=3.25   GUID=9ffa8790-0a0e-43bf-85ce-44e3ded5ea37
+   Joint=164   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=3   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=3   GUID=ac379752-237e-4ba1-9247-db6c7b6b407c
+   Joint=165   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=3   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=3   GUID=7917e79e-918e-4a24-9313-d622ee284ff7
+   Joint=166   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=3.25   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=3.25   GUID=cbb06d91-808c-4f33-a8bd-b7e3f8060bc5
+   Joint=167   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=3.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=3.25   GUID=5e2914a9-93b9-4b91-89a3-3ca8d4f5c453
+   Joint=168   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=3   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=3   GUID=f906209a-476a-4ae4-881d-9b392933146c
+   Joint=169   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=3   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=3   GUID=60caa409-b453-4af1-8560-46ca6f9ae930
+   Joint=170   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=3.25   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=3.25   GUID=1edcb2ab-37c8-4da6-ab1d-f1e2f0768081
+   Joint=171   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=3.25   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=3.25   GUID=5b6d6bde-cf99-429a-98c3-4ff5cae6fe9a
+   Joint=172   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=3.5   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=3.5   GUID=d05e399d-338a-4f4c-9c9c-637492a5c67d
+   Joint=173   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=3.5   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=3.5   GUID=dc80d788-b349-4c80-a9ce-f232412fbaa4
+   Joint=174   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0   Z=3.75   SpecialJt=No   GlobalX=5   GlobalY=0   GlobalZ=3.75   GUID=7cd6b306-9608-4260-8f7b-f31192fe533d
+   Joint=175   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.25   Z=3.75   SpecialJt=No   GlobalX=5   GlobalY=0.25   GlobalZ=3.75   GUID=420baa72-a49a-4b84-aad2-ffe459566111
+   Joint=176   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=3.5   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=3.5   GUID=9d9aed76-09d2-4af0-b9ff-c0216d513770
+   Joint=177   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=3.5   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=3.5   GUID=1124cb10-0a07-4102-b37f-57b3171094d8
+   Joint=178   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0   Z=3.75   SpecialJt=No   GlobalX=4.5   GlobalY=0   GlobalZ=3.75   GUID=737b8c6d-8280-413e-8e29-882b73532d68
+   Joint=179   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.25   Z=3.75   SpecialJt=No   GlobalX=4.5   GlobalY=0.25   GlobalZ=3.75   GUID=296ff3fe-d056-4c6f-806b-606273186c3d
+   Joint=180   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=3.5   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=3.5   GUID=e8109399-dd20-49ea-93e8-8ddf04f4654c
+   Joint=181   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=3.5   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=3.5   GUID=0dcb966d-57b1-4313-ac8d-25c87261ade6
+   Joint=182   CoordSys=GLOBAL   CoordType=Cartesian   XorR=4.5   Y=0.125   Z=3.75   SpecialJt=No   GlobalX=4.5   GlobalY=0.125   GlobalZ=3.75   GUID=2f6d3346-c0c8-4bdf-8a4e-89aef0ccdd38
+   Joint=183   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5   Y=0.125   Z=3.75   SpecialJt=No   GlobalX=5   GlobalY=0.125   GlobalZ=3.75   GUID=3e72c250-2878-441e-aaa9-bcfdfd56eabf
+   Joint=184   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5.5   Y=0   Z=1.75   SpecialJt=No   GlobalX=5.5   GlobalY=0   GlobalZ=1.75   GUID=2b5a92c5-0e2e-4587-b081-e6fdd21dcfb8
+   Joint=185   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5.5   Y=0.25   Z=1.75   SpecialJt=No   GlobalX=5.5   GlobalY=0.25   GlobalZ=1.75   GUID=18bc8b0c-c120-4a97-9850-ecdc3388d2a8
+   Joint=186   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5.5   Y=0.125   Z=1.75   SpecialJt=No   GlobalX=5.5   GlobalY=0.125   GlobalZ=1.75   GUID=543d8a9f-822b-49ea-adb2-7f00f1bc60bc
+   Joint=187   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5.5   Y=0   Z=2   SpecialJt=No   GlobalX=5.5   GlobalY=0   GlobalZ=2   GUID=49e04b01-ca1f-4297-8f15-e33a56d81ddf
+   Joint=188   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5.5   Y=0.25   Z=2   SpecialJt=No   GlobalX=5.5   GlobalY=0.25   GlobalZ=2   GUID=10c36622-2343-4baf-b334-0cb5e903fb69
+   Joint=189   CoordSys=GLOBAL   CoordType=Cartesian   XorR=5.5   Y=0.125   Z=2   SpecialJt=No   GlobalX=5.5   GlobalY=0.125   GlobalZ=2   GUID=fef210d6-74f2-4aed-9e85-33fcd2584f32
+   Joint=190   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6   Y=0   Z=1.75   SpecialJt=No   GlobalX=6   GlobalY=0   GlobalZ=1.75   GUID=0a5c5c66-ea4b-4491-bb6d-e4bac6c05033
+   Joint=191   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6   Y=0.25   Z=1.75   SpecialJt=No   GlobalX=6   GlobalY=0.25   GlobalZ=1.75   GUID=747ae7fe-b292-4d86-983f-2018b025a977
+   Joint=192   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6   Y=0.125   Z=1.75   SpecialJt=No   GlobalX=6   GlobalY=0.125   GlobalZ=1.75   GUID=ccc36b1f-0cb7-46ad-9ad5-7ab893d7b697
+   Joint=193   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6   Y=0   Z=2   SpecialJt=No   GlobalX=6   GlobalY=0   GlobalZ=2   GUID=8882f1e3-780d-430b-ad68-c38d8d540bc3
+   Joint=194   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6   Y=0.25   Z=2   SpecialJt=No   GlobalX=6   GlobalY=0.25   GlobalZ=2   GUID=9ff3ad6f-c7ba-4a34-94b3-1a73407ed11b
+   Joint=195   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6   Y=0.125   Z=2   SpecialJt=No   GlobalX=6   GlobalY=0.125   GlobalZ=2   GUID=01e9f31e-711c-4a73-a03f-d7c64ec94f58
+   Joint=196   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6.5   Y=0   Z=1.75   SpecialJt=No   GlobalX=6.5   GlobalY=0   GlobalZ=1.75   GUID=7d827986-299b-45e8-aaf6-f9034a8b7b94
+   Joint=197   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6.5   Y=0.25   Z=1.75   SpecialJt=No   GlobalX=6.5   GlobalY=0.25   GlobalZ=1.75   GUID=b7a16e72-043d-4d27-a6d6-d5ca51382edd
+   Joint=198   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6.5   Y=0.125   Z=1.75   SpecialJt=No   GlobalX=6.5   GlobalY=0.125   GlobalZ=1.75   GUID=6b5f22cb-a773-4172-b7d2-c4da593a776d
+   Joint=199   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6.5   Y=0   Z=2   SpecialJt=No   GlobalX=6.5   GlobalY=0   GlobalZ=2   GUID=772d0d4f-969c-46da-a3cf-e484f83bfdf5
+   Joint=200   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6.5   Y=0.25   Z=2   SpecialJt=No   GlobalX=6.5   GlobalY=0.25   GlobalZ=2   GUID=48f47e95-a466-4117-aa89-b80ca0321a77
+   Joint=201   CoordSys=GLOBAL   CoordType=Cartesian   XorR=6.5   Y=0.125   Z=2   SpecialJt=No   GlobalX=6.5   GlobalY=0.125   GlobalZ=2   GUID=cd72604f-8699-44fe-b90e-6363c7625a44
+ 
+TABLE:  "CONNECTIVITY - SOLID"
+   Solid=1   Joint1=65   Joint2=10   Joint3=98   Joint4=99   Joint5=104   Joint6=100   Joint7=108   Joint8=109   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=0.375   GUID=75113202-c12e-49cc-b7b5-e9ddaaf305cc
+   Solid=2   Joint1=98   Joint2=99   Joint3=66   Joint4=12   Joint5=108   Joint6=109   Joint7=105   Joint8=101   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=0.375   GUID=4dc3ec9a-e7a9-48bc-ad9e-33e04149a10b
+   Solid=3   Joint1=104   Joint2=100   Joint3=108   Joint4=109   Joint5=106   Joint6=102   Joint7=110   Joint8=111   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=0.625   GUID=dcf3a34e-fa5a-4b35-885b-b88840ac66d8
+   Solid=4   Joint1=108   Joint2=109   Joint3=105   Joint4=101   Joint5=110   Joint6=111   Joint7=107   Joint8=103   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=0.625   GUID=ccedac96-9370-40a8-96c5-dd68d1299024
+   Solid=5   Joint1=106   Joint2=102   Joint3=110   Joint4=111   Joint5=116   Joint6=112   Joint7=120   Joint8=121   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=0.875   GUID=7626bec4-a757-4289-b7b7-c6ad34776e94
+   Solid=6   Joint1=110   Joint2=111   Joint3=107   Joint4=103   Joint5=120   Joint6=121   Joint7=117   Joint8=113   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=0.875   GUID=354cabec-065e-4821-a26e-17e3e11ab307
+   Solid=7   Joint1=116   Joint2=112   Joint3=120   Joint4=121   Joint5=118   Joint6=114   Joint7=122   Joint8=123   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=1.125   GUID=d1b41b2f-c6d9-4523-b697-96e8f2841463
+   Solid=8   Joint1=120   Joint2=121   Joint3=117   Joint4=113   Joint5=122   Joint6=123   Joint7=119   Joint8=115   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=1.125   GUID=6d372365-4615-48ec-ad51-5427d482d5ee
+   Solid=9   Joint1=118   Joint2=114   Joint3=122   Joint4=123   Joint5=128   Joint6=124   Joint7=132   Joint8=133   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=1.375   GUID=98d8a91b-554d-4823-8c07-808f44983363
+   Solid=10   Joint1=122   Joint2=123   Joint3=119   Joint4=115   Joint5=132   Joint6=133   Joint7=129   Joint8=125   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=1.375   GUID=6b6a85d5-3ca2-4bde-b919-fc77b1e953d0
+   Solid=11   Joint1=128   Joint2=124   Joint3=132   Joint4=133   Joint5=130   Joint6=126   Joint7=134   Joint8=135   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=1.625   GUID=d456167d-eb6a-4108-a305-f8cb51ae1a7f
+   Solid=12   Joint1=132   Joint2=133   Joint3=129   Joint4=125   Joint5=134   Joint6=135   Joint7=131   Joint8=127   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=1.625   GUID=7e28c8bd-33ad-4a43-b2c3-b2cd1c41f248
+   Solid=13   Joint1=130   Joint2=126   Joint3=134   Joint4=135   Joint5=140   Joint6=136   Joint7=144   Joint8=145   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=1.875   GUID=31bd4c42-0508-4758-ba59-86c6d5997916
+   Solid=14   Joint1=134   Joint2=135   Joint3=131   Joint4=127   Joint5=144   Joint6=145   Joint7=141   Joint8=137   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=1.875   GUID=247e8d28-5bf3-4091-9ce4-54cdf5157536
+   Solid=15   Joint1=140   Joint2=136   Joint3=144   Joint4=145   Joint5=142   Joint6=138   Joint7=146   Joint8=147   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=2.125   GUID=600db97d-ab33-48c5-b739-9d73ac3a5b20
+   Solid=16   Joint1=144   Joint2=145   Joint3=141   Joint4=137   Joint5=146   Joint6=147   Joint7=143   Joint8=139   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=2.125   GUID=a9bc3490-f682-4692-8dfa-e30c11ea1ba0
+   Solid=17   Joint1=142   Joint2=138   Joint3=146   Joint4=147   Joint5=152   Joint6=148   Joint7=156   Joint8=157   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=2.375   GUID=387b012a-5bea-4a56-98b2-cfac0c3eee31
+   Solid=18   Joint1=146   Joint2=147   Joint3=143   Joint4=139   Joint5=156   Joint6=157   Joint7=153   Joint8=149   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=2.375   GUID=7badb34f-2e98-4f7a-b086-916d2c0400bb
+   Solid=19   Joint1=152   Joint2=148   Joint3=156   Joint4=157   Joint5=154   Joint6=150   Joint7=158   Joint8=159   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=2.625   GUID=bfab48ca-ccd1-4161-93e2-dc4528920462
+   Solid=20   Joint1=156   Joint2=157   Joint3=153   Joint4=149   Joint5=158   Joint6=159   Joint7=155   Joint8=151   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=2.625   GUID=17253cb5-3587-4305-9a80-af9d2bff743b
+   Solid=21   Joint1=154   Joint2=150   Joint3=158   Joint4=159   Joint5=164   Joint6=160   Joint7=168   Joint8=169   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=2.875   GUID=ec338753-54af-4423-957e-e08fd9a0ead8
+   Solid=22   Joint1=158   Joint2=159   Joint3=155   Joint4=151   Joint5=168   Joint6=169   Joint7=165   Joint8=161   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=2.875   GUID=61158e41-dd1a-4c93-9a14-a64202f53b52
+   Solid=23   Joint1=5   Joint2=13   Joint3=67   Joint4=68   Joint5=1   Joint6=15   Joint7=69   Joint8=70   Volume=0.015625   CentroidX=0.25   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=24   Joint1=67   Joint2=68   Joint3=7   Joint4=14   Joint5=69   Joint6=70   Joint7=4   Joint8=16   Volume=0.015625   CentroidX=0.25   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=25   Joint1=13   Joint2=17   Joint3=68   Joint4=71   Joint5=15   Joint6=19   Joint7=70   Joint8=72   Volume=0.015625   CentroidX=0.75   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=26   Joint1=68   Joint2=71   Joint3=14   Joint4=18   Joint5=70   Joint6=72   Joint7=16   Joint8=20   Volume=0.015625   CentroidX=0.75   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=27   Joint1=17   Joint2=21   Joint3=71   Joint4=73   Joint5=19   Joint6=23   Joint7=72   Joint8=74   Volume=0.015625   CentroidX=1.25   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=28   Joint1=71   Joint2=73   Joint3=18   Joint4=22   Joint5=72   Joint6=74   Joint7=20   Joint8=24   Volume=0.015625   CentroidX=1.25   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=29   Joint1=21   Joint2=25   Joint3=73   Joint4=75   Joint5=23   Joint6=27   Joint7=74   Joint8=76   Volume=0.015625   CentroidX=1.75   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=30   Joint1=73   Joint2=75   Joint3=22   Joint4=26   Joint5=74   Joint6=76   Joint7=24   Joint8=28   Volume=0.015625   CentroidX=1.75   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=31   Joint1=25   Joint2=29   Joint3=75   Joint4=77   Joint5=27   Joint6=31   Joint7=76   Joint8=78   Volume=0.015625   CentroidX=2.25   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=32   Joint1=75   Joint2=77   Joint3=26   Joint4=30   Joint5=76   Joint6=78   Joint7=28   Joint8=32   Volume=0.015625   CentroidX=2.25   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=33   Joint1=29   Joint2=33   Joint3=77   Joint4=79   Joint5=31   Joint6=35   Joint7=78   Joint8=80   Volume=0.015625   CentroidX=2.75   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=34   Joint1=77   Joint2=79   Joint3=30   Joint4=34   Joint5=78   Joint6=80   Joint7=32   Joint8=36   Volume=0.015625   CentroidX=2.75   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=35   Joint1=33   Joint2=37   Joint3=79   Joint4=81   Joint5=35   Joint6=39   Joint7=80   Joint8=82   Volume=0.015625   CentroidX=3.25   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=36   Joint1=79   Joint2=81   Joint3=34   Joint4=38   Joint5=80   Joint6=82   Joint7=36   Joint8=40   Volume=0.015625   CentroidX=3.25   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=37   Joint1=37   Joint2=41   Joint3=81   Joint4=83   Joint5=39   Joint6=43   Joint7=82   Joint8=84   Volume=0.015625   CentroidX=3.75   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=38   Joint1=81   Joint2=83   Joint3=38   Joint4=42   Joint5=82   Joint6=84   Joint7=40   Joint8=44   Volume=0.015625   CentroidX=3.75   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=39   Joint1=41   Joint2=45   Joint3=83   Joint4=85   Joint5=43   Joint6=47   Joint7=84   Joint8=86   Volume=0.015625   CentroidX=4.25   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=40   Joint1=83   Joint2=85   Joint3=42   Joint4=46   Joint5=84   Joint6=86   Joint7=44   Joint8=48   Volume=0.015625   CentroidX=4.25   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=41   Joint1=45   Joint2=6   Joint3=85   Joint4=87   Joint5=47   Joint6=2   Joint7=86   Joint8=88   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=-0.125
+   Solid=42   Joint1=85   Joint2=87   Joint3=46   Joint4=8   Joint5=86   Joint6=88   Joint7=48   Joint8=3   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=-0.125
+   Solid=43   Joint1=1   Joint2=15   Joint3=69   Joint4=70   Joint5=9   Joint6=49   Joint7=89   Joint8=90   Volume=0.015625   CentroidX=0.25   CentroidY=0.0625   CentroidZ=0.125
+   Solid=44   Joint1=69   Joint2=70   Joint3=4   Joint4=16   Joint5=89   Joint6=90   Joint7=11   Joint8=50   Volume=0.015625   CentroidX=0.25   CentroidY=0.1875   CentroidZ=0.125
+   Solid=45   Joint1=15   Joint2=19   Joint3=70   Joint4=72   Joint5=49   Joint6=51   Joint7=90   Joint8=91   Volume=0.015625   CentroidX=0.75   CentroidY=0.0625   CentroidZ=0.125
+   Solid=46   Joint1=70   Joint2=72   Joint3=16   Joint4=20   Joint5=90   Joint6=91   Joint7=50   Joint8=52   Volume=0.015625   CentroidX=0.75   CentroidY=0.1875   CentroidZ=0.125
+   Solid=47   Joint1=19   Joint2=23   Joint3=72   Joint4=74   Joint5=51   Joint6=53   Joint7=91   Joint8=92   Volume=0.015625   CentroidX=1.25   CentroidY=0.0625   CentroidZ=0.125
+   Solid=48   Joint1=72   Joint2=74   Joint3=20   Joint4=24   Joint5=91   Joint6=92   Joint7=52   Joint8=54   Volume=0.015625   CentroidX=1.25   CentroidY=0.1875   CentroidZ=0.125
+   Solid=49   Joint1=23   Joint2=27   Joint3=74   Joint4=76   Joint5=53   Joint6=55   Joint7=92   Joint8=93   Volume=0.015625   CentroidX=1.75   CentroidY=0.0625   CentroidZ=0.125
+   Solid=50   Joint1=74   Joint2=76   Joint3=24   Joint4=28   Joint5=92   Joint6=93   Joint7=54   Joint8=56   Volume=0.015625   CentroidX=1.75   CentroidY=0.1875   CentroidZ=0.125
+   Solid=51   Joint1=27   Joint2=31   Joint3=76   Joint4=78   Joint5=55   Joint6=57   Joint7=93   Joint8=94   Volume=0.015625   CentroidX=2.25   CentroidY=0.0625   CentroidZ=0.125
+   Solid=52   Joint1=76   Joint2=78   Joint3=28   Joint4=32   Joint5=93   Joint6=94   Joint7=56   Joint8=58   Volume=0.015625   CentroidX=2.25   CentroidY=0.1875   CentroidZ=0.125
+   Solid=53   Joint1=31   Joint2=35   Joint3=78   Joint4=80   Joint5=57   Joint6=59   Joint7=94   Joint8=95   Volume=0.015625   CentroidX=2.75   CentroidY=0.0625   CentroidZ=0.125
+   Solid=54   Joint1=78   Joint2=80   Joint3=32   Joint4=36   Joint5=94   Joint6=95   Joint7=58   Joint8=60   Volume=0.015625   CentroidX=2.75   CentroidY=0.1875   CentroidZ=0.125
+   Solid=55   Joint1=35   Joint2=39   Joint3=80   Joint4=82   Joint5=59   Joint6=61   Joint7=95   Joint8=96   Volume=0.015625   CentroidX=3.25   CentroidY=0.0625   CentroidZ=0.125
+   Solid=56   Joint1=80   Joint2=82   Joint3=36   Joint4=40   Joint5=95   Joint6=96   Joint7=60   Joint8=62   Volume=0.015625   CentroidX=3.25   CentroidY=0.1875   CentroidZ=0.125
+   Solid=57   Joint1=39   Joint2=43   Joint3=82   Joint4=84   Joint5=61   Joint6=63   Joint7=96   Joint8=97   Volume=0.015625   CentroidX=3.75   CentroidY=0.0625   CentroidZ=0.125
+   Solid=58   Joint1=82   Joint2=84   Joint3=40   Joint4=44   Joint5=96   Joint6=97   Joint7=62   Joint8=64   Volume=0.015625   CentroidX=3.75   CentroidY=0.1875   CentroidZ=0.125
+   Solid=59   Joint1=43   Joint2=47   Joint3=84   Joint4=86   Joint5=63   Joint6=65   Joint7=97   Joint8=98   Volume=0.015625   CentroidX=4.25   CentroidY=0.0625   CentroidZ=0.125
+   Solid=60   Joint1=84   Joint2=86   Joint3=44   Joint4=48   Joint5=97   Joint6=98   Joint7=64   Joint8=66   Volume=0.015625   CentroidX=4.25   CentroidY=0.1875   CentroidZ=0.125
+   Solid=61   Joint1=47   Joint2=2   Joint3=86   Joint4=88   Joint5=65   Joint6=10   Joint7=98   Joint8=99   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=0.125
+   Solid=62   Joint1=86   Joint2=88   Joint3=48   Joint4=3   Joint5=98   Joint6=99   Joint7=66   Joint8=12   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=0.125
+   Solid=63   Joint1=164   Joint2=160   Joint3=168   Joint4=169   Joint5=166   Joint6=162   Joint7=170   Joint8=171   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=3.125   GUID=41cdc5d5-a6b0-4fd1-a0d6-5c95aab36639
+   Solid=64   Joint1=168   Joint2=169   Joint3=165   Joint4=161   Joint5=170   Joint6=171   Joint7=167   Joint8=163   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=3.125   GUID=fd1b5fb6-59d9-452a-ad08-13e94c8feab8
+   Solid=65   Joint1=166   Joint2=162   Joint3=170   Joint4=171   Joint5=176   Joint6=172   Joint7=180   Joint8=181   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=3.375   GUID=29d36b2e-5fe8-4ab3-8d7f-4517877bfe10
+   Solid=66   Joint1=170   Joint2=171   Joint3=167   Joint4=163   Joint5=180   Joint6=181   Joint7=177   Joint8=173   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=3.375   GUID=0556cbe0-ef32-4c9e-b416-c47fb04477df
+   Solid=67   Joint1=176   Joint2=172   Joint3=180   Joint4=181   Joint5=178   Joint6=174   Joint7=182   Joint8=183   Volume=0.015625   CentroidX=4.75   CentroidY=0.0625   CentroidZ=3.625   GUID=bbf39697-97f1-4ba0-8b7d-d73c41b2b3e7
+   Solid=68   Joint1=180   Joint2=181   Joint3=177   Joint4=173   Joint5=182   Joint6=183   Joint7=179   Joint8=175   Volume=0.015625   CentroidX=4.75   CentroidY=0.1875   CentroidZ=3.625   GUID=443f96b9-9756-4f24-a8fe-968487ee0091
+   Solid=69   Joint1=126   Joint2=184   Joint3=135   Joint4=186   Joint5=136   Joint6=187   Joint7=145   Joint8=189   Volume=0.015625   CentroidX=5.25   CentroidY=0.0625   CentroidZ=1.875   GUID=f687efaa-682d-4a4f-8fa0-09a4b8067b1f
+   Solid=70   Joint1=135   Joint2=186   Joint3=127   Joint4=185   Joint5=145   Joint6=189   Joint7=137   Joint8=188   Volume=0.015625   CentroidX=5.25   CentroidY=0.1875   CentroidZ=1.875   GUID=2b2bfee6-6faf-4420-986c-df3c25adc0b5
+   Solid=71   Joint1=184   Joint2=190   Joint3=186   Joint4=192   Joint5=187   Joint6=193   Joint7=189   Joint8=195   Volume=0.015625   CentroidX=5.75   CentroidY=0.0625   CentroidZ=1.875   GUID=d0931093-1a3d-411d-8e82-d4515c233ed8
+   Solid=72   Joint1=186   Joint2=192   Joint3=185   Joint4=191   Joint5=189   Joint6=195   Joint7=188   Joint8=194   Volume=0.015625   CentroidX=5.75   CentroidY=0.1875   CentroidZ=1.875   GUID=8faa1893-49eb-4070-92e5-cf85e9e5d6bb
+   Solid=73   Joint1=190   Joint2=196   Joint3=192   Joint4=198   Joint5=193   Joint6=199   Joint7=195   Joint8=201   Volume=0.015625   CentroidX=6.25   CentroidY=0.0625   CentroidZ=1.875   GUID=b29ac764-2cba-447a-a50a-8aabbe959a86
+   Solid=74   Joint1=192   Joint2=198   Joint3=191   Joint4=197   Joint5=195   Joint6=201   Joint7=194   Joint8=200   Volume=0.015625   CentroidX=6.25   CentroidY=0.1875   CentroidZ=1.875   GUID=a48c662d-ffed-4d18-9c44-f03c6c433257
+ 
+TABLE:  "JOINT RESTRAINT ASSIGNMENTS"
+   Joint=1   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=4   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=5   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=7   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=9   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=11   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=67   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=69   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=89   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=174   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=175   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=178   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=179   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=182   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+   Joint=183   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+ 
+TABLE:  "JOINT LOADS - FORCE"
+   Joint=196   LoadPat=DEAD   CoordSys=GLOBAL   F1=0   F2=0   F3=-6500   M1=0   M2=0   M3=0   GUID=babdddcb-21e0-40cc-b7b6-0b19c572ced3
+   Joint=197   LoadPat=DEAD   CoordSys=GLOBAL   F1=0   F2=0   F3=-6500   M1=0   M2=0   M3=0   GUID=c321edbf-2411-44c0-b663-8391f5bbfacc
+   Joint=198   LoadPat=DEAD   CoordSys=GLOBAL   F1=0   F2=0   F3=-6500   M1=0   M2=0   M3=0   GUID=aa2bcace-06b7-47a3-a7e6-db3c5f35318a
+   Joint=199   LoadPat=DEAD   CoordSys=GLOBAL   F1=0   F2=0   F3=-6500   M1=0   M2=0   M3=0   GUID=8746a672-e679-48a1-9656-4b7b78b7291a
+   Joint=200   LoadPat=DEAD   CoordSys=GLOBAL   F1=0   F2=0   F3=-6500   M1=0   M2=0   M3=0   GUID=5233bf8b-ca7d-4c16-a078-72627e0b6d5d
+   Joint=201   LoadPat=DEAD   CoordSys=GLOBAL   F1=0   F2=0   F3=-6500   M1=0   M2=0   M3=0   GUID=7835c9d5-027d-4ffc-8d83-5fa516c1c1f1
+ 
+TABLE:  "SOLID PROPERTY ASSIGNMENTS"
+   Solid=1   SolidProp=Solid1
+   Solid=2   SolidProp=Solid1
+   Solid=3   SolidProp=Solid1
+   Solid=4   SolidProp=Solid1
+   Solid=5   SolidProp=Solid1
+   Solid=6   SolidProp=Solid1
+   Solid=7   SolidProp=Solid1
+   Solid=8   SolidProp=Solid1
+   Solid=9   SolidProp=Solid1
+   Solid=10   SolidProp=Solid1
+   Solid=11   SolidProp=Solid1
+   Solid=12   SolidProp=Solid1
+   Solid=13   SolidProp=Solid1
+   Solid=14   SolidProp=Solid1
+   Solid=15   SolidProp=Solid1
+   Solid=16   SolidProp=Solid1
+   Solid=17   SolidProp=Solid1
+   Solid=18   SolidProp=Solid1
+   Solid=19   SolidProp=Solid1
+   Solid=20   SolidProp=Solid1
+   Solid=21   SolidProp=Solid1
+   Solid=22   SolidProp=Solid1
+   Solid=23   SolidProp=Solid1
+   Solid=24   SolidProp=Solid1
+   Solid=25   SolidProp=Solid1
+   Solid=26   SolidProp=Solid1
+   Solid=27   SolidProp=Solid1
+   Solid=28   SolidProp=Solid1
+   Solid=29   SolidProp=Solid1
+   Solid=30   SolidProp=Solid1
+   Solid=31   SolidProp=Solid1
+   Solid=32   SolidProp=Solid1
+   Solid=33   SolidProp=Solid1
+   Solid=34   SolidProp=Solid1
+   Solid=35   SolidProp=Solid1
+   Solid=36   SolidProp=Solid1
+   Solid=37   SolidProp=Solid1
+   Solid=38   SolidProp=Solid1
+   Solid=39   SolidProp=Solid1
+   Solid=40   SolidProp=Solid1
+   Solid=41   SolidProp=Solid1
+   Solid=42   SolidProp=Solid1
+   Solid=43   SolidProp=Solid1
+   Solid=44   SolidProp=Solid1
+   Solid=45   SolidProp=Solid1
+   Solid=46   SolidProp=Solid1
+   Solid=47   SolidProp=Solid1
+   Solid=48   SolidProp=Solid1
+   Solid=49   SolidProp=Solid1
+   Solid=50   SolidProp=Solid1
+   Solid=51   SolidProp=Solid1
+   Solid=52   SolidProp=Solid1
+   Solid=53   SolidProp=Solid1
+   Solid=54   SolidProp=Solid1
+   Solid=55   SolidProp=Solid1
+   Solid=56   SolidProp=Solid1
+   Solid=57   SolidProp=Solid1
+   Solid=58   SolidProp=Solid1
+   Solid=59   SolidProp=Solid1
+   Solid=60   SolidProp=Solid1
+   Solid=61   SolidProp=Solid1
+   Solid=62   SolidProp=Solid1
+   Solid=63   SolidProp=Solid1
+   Solid=64   SolidProp=Solid1
+   Solid=65   SolidProp=Solid1
+   Solid=66   SolidProp=Solid1
+   Solid=67   SolidProp=Solid1
+   Solid=68   SolidProp=Solid1
+   Solid=69   SolidProp=Solid1
+   Solid=70   SolidProp=Solid1
+   Solid=71   SolidProp=Solid1
+   Solid=72   SolidProp=Solid1
+   Solid=73   SolidProp=Solid1
+   Solid=74   SolidProp=Solid1
+ 
+TABLE:  "PREFERENCES - DIMENSIONAL"
+   MergeTol=0.001   FineGrid=0.25   Nudge=0.25   SelectTol=3   SnapTol=12   SLineThick=2   PLineThick=4   MaxFont=8   MinFont=3   AutoZoom=10   ShrinkFact=70   TextFileLen=240
+ 
+TABLE:  "PREFERENCES - STEEL DESIGN - AISC 360-10"
+   THDesign=Envelopes   FrameType=SMF   PatLLF=0.75   SRatioLimit=0.95   MaxIter=1   SDC=D   SeisCode=Yes   SeisLoad=Yes   ImpFactor=1   SystemRho=1   SystemSds=0.5   SystemR=8   SystemCd=5.5   Omega0=3   Provision=LRFD _
+        AMethod="Direct Analysis"   SOMethod="General 2nd Order"   SRMethod="Tau-b Fixed"   NLCoeff=0.002   PhiB=0.9   PhiC=0.9   PhiTY=0.9   PhiTF=0.75   PhiV=0.9   PhiVRolledI=1   PhiVT=0.9   PlugWeld=Yes   HSSWelding=ERW   HSSReduceT=No _
+        CheckDefl=No   DLRat=120   SDLAndLLRat=120   LLRat=360   TotalRat=240   NetRat=240
+ 
+TABLE:  "PREFERENCES - CONCRETE DESIGN - ACI 318-11"
+   THDesign=Envelopes   NumCurves=24   NumPoints=11   MinEccen=Yes   PatLLF=0.75   UFLimit=0.95   SeisCat=D   Rho=1   Sds=0.5   PhiT=0.9   PhiCTied=0.65   PhiCSpiral=0.75   PhiV=0.75   PhiVSeismic=0.6   PhiVJoint=0.85
+ 
+TABLE:  "PREFERENCES - ALUMINUM DESIGN - AA-ASD 2000"
+   THDesign=Envelopes   FrameType="Moment Frame"   SRatioLimit=1   MaxIter=1   LatFact=1.33333333333333   UseLatFact=No   Bridge=No
+ 
+TABLE:  "PREFERENCES - COLD FORMED DESIGN - AISI-ASD96"
+   THDesign=Envelopes   FrameType="Braced Frame"   SRatioLimit=1   MaxIter=1   OmegaBS=1.67   OmegaBUS=1.67   OmegaBLTB=1.67   OmegaVS=1.67   OmegaVNS=1.5   OmegaT=1.67   OmegaC=1.8
+ 
+TABLE:  "OPTIONS - COLORS - DISPLAY"
+   DeviceType=Screen   Points=Blue   LinesFrame=Blue   LinesFrmDL=Blue   LinesCable=Green   LinesTendon=Green   SpringLinks=Green   Restraints=Green   Releases=Green   Axes=Cyan   Text=Black   ShadowLines=Gray8Dark   GuideLines=Gray8Dark _
+        Highlight=Red   Selection=10504778   AreaFillBot=Red   AreaFillTop=16744703   AreaFillSd=Red   AreaEdge=DarkRed   SolidF1=Red   SolidF2=Blue   SolidF3=Green   SolidF4=Yellow   SolidF5=White   SolidF6=Cyan   SolidEdge=DarkRed _
+        Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0.5
+   DeviceType=Printer   Points=Gray8Dark   LinesFrame=Black   LinesFrmDL=Gray4   LinesCable=Black   LinesTendon=Black   SpringLinks=Gray8Dark   Restraints=Gray8Dark   Releases=Gray4   Axes=Black   Text=Black   ShadowLines=Gray4 _
+        GuideLines=Gray4   Highlight=Black   Selection=Black   AreaFillBot=Gray4   AreaFillTop=Gray8Dark   AreaFillSd=Gray4   AreaEdge=Black   SolidF1=Gray1Light   SolidF2=Gray2   SolidF3=Gray3   SolidF4=Gray4   SolidF5=Gray5 _
+        SolidF6=Gray6   SolidEdge=Black   Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0.5
+   DeviceType="Color Printer"   Points=Blue   LinesFrame=Blue   LinesFrmDL=Blue   LinesCable=Green   LinesTendon=Green   SpringLinks=Green   Restraints=Green   Releases=Green   Axes=Cyan   Text=Black   ShadowLines=Gray8Dark _
+        GuideLines=Gray8Dark   Highlight=Red   Selection=10504778   AreaFillBot=Red   AreaFillTop=16744703   AreaFillSd=Red   AreaEdge=DarkRed   SolidF1=Red   SolidF2=Blue   SolidF3=Green   SolidF4=Yellow   SolidF5=White   SolidF6=Cyan _
+        SolidEdge=DarkRed   Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0.5
+ 
+TABLE:  "OPTIONS - COLORS - OUTPUT"
+   DeviceType=Screen   Contour1=13107400   Contour2=6553828   Contour3=Red   Contour4=16639   Contour5=Orange   Contour6=43775   Contour7=54527   Contour8=Yellow   Contour9=65408   Contour10=Green   Contour11=8453888   Contour12=Cyan _
+        Contour13=16755200   Contour14=16733440   Contour15=Blue   Transpare=0.5   Ratio1=Cyan   Ratio2=Green   Ratio3=Yellow   Ratio4=Orange   Ratio5=Red   RatioNotD=Gray4   RatioNotC=Red   RatioVal1=0.5   RatioVal2=0.7   RatioVal3=0.9 _
+        RatioVal4=1   DFillPos=Blue   DFillNeg=Red   DFillRPos=Green   DFillRNeg=Green
+   DeviceType=Printer   Contour1=Black   Contour2=3158064   Contour3=4210752   Contour4=5263440   Contour5=6316128   Contour6=7368816   Contour7=Gray8Dark   Contour8=Gray7   Contour9=Gray6   Contour10=Gray5   Contour11=Gray4 _
+        Contour12=Gray3   Contour13=Gray2   Contour14=Gray1Light   Contour15=White   Transpare=0   Ratio1=Gray2   Ratio2=Gray4   Ratio3=Gray8Dark   Ratio4=4210752   Ratio5=Black   RatioNotD=Gray4   RatioNotC=Black   RatioVal1=0.5 _
+        RatioVal2=0.7   RatioVal3=0.9   RatioVal4=1   DFillPos=Gray8Dark   DFillNeg=Gray8Dark   DFillRPos=4210752   DFillRNeg=4210752
+   DeviceType="Color Printer"   Contour1=13107400   Contour2=6553828   Contour3=Red   Contour4=16639   Contour5=Orange   Contour6=43775   Contour7=54527   Contour8=Yellow   Contour9=65408   Contour10=Green   Contour11=8453888 _
+        Contour12=Cyan   Contour13=16755200   Contour14=16733440   Contour15=Blue   Transpare=0   Ratio1=Cyan   Ratio2=Green   Ratio3=Yellow   Ratio4=Orange   Ratio5=Red   RatioNotD=Gray4   RatioNotC=Red   RatioVal1=0.5   RatioVal2=0.7 _
+        RatioVal3=0.9   RatioVal4=1   DFillPos=Blue   DFillNeg=Red   DFillRPos=Green   DFillRNeg=Green
+ 
+TABLE:  "DATABASE FORMAT TYPES"
+   UnitsCurr=Yes   OverrideE=No
+ 
+TABLE:  "PROJECT INFORMATION"
+   Item="Company Name"
+   Item="Client Name"
+   Item="Project Name"
+   Item="Project Number"
+   Item="Model Name"
+   Item="Model Description"
+   Item="Revision Number"
+   Item="Frame Type"
+   Item=Engineer
+   Item=Checker
+   Item=Supervisor
+   Item="Issue Code"
+   Item="Design Code"
+ 
+TABLE:  "MATERIAL LIST 1 - BY OBJECT TYPE"
+   ObjectType=Solid   Material=A992Fy50-1   TotalWeight=88.9998739332436
+ 
+TABLE:  "MATERIAL LIST 2 - BY SECTION PROPERTY"
+   Section=Solid1   ObjectType=Solid   TotalWeight=88.9998739332436
+ 
+END TABLE DATA
